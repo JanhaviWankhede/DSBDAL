@@ -47,7 +47,21 @@ public class FractionalKnapsack {
     }
 
     public static void main(String[] args) {
+       // Start time
+        long startTime = System.nanoTime();
+
         fractionalKnapsack();
+
+        // End time
+        long endTime = System.nanoTime();
+
+        // Execution time in nanoseconds
+        long duration = endTime - startTime;
+        System.out.println("Execution time: " + duration + " nanoseconds");
+
+        // Optional: Execution time in milliseconds
+        System.out.println("Execution time: " + (duration / 1_000_000.0) + " milliseconds");
     }
 }
+
 
