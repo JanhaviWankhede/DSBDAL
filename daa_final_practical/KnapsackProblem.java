@@ -27,8 +27,15 @@ public class KnapsackProblem {
         int[] wt = {8, 16, 32, 40};      // Weights
         int W = 64;                      // Capacity
         int n = val.length - 1;          // Last index
-
+        
+        long startTime = System.nanoTime();
         int result = knapsack(W, n, wt, val);
         System.out.println("Maximum value in Knapsack = " + result);
+        long endTime = System.nanoTime();
+
+        // Calculate and print time taken in milliseconds
+        double timeTaken = (endTime - startTime) / 1_000_000.0;
+        System.out.println("Execution Time: " + timeTaken + " ms");
     }
 }
+
