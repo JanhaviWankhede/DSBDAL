@@ -30,12 +30,22 @@ public class FibonacciExample {
 
         // Recursive Fibonacci
         System.out.println("Recursive Fibonacci:");
+                long startRecursive = System.nanoTime();
+
         for (int i = 0; i < n; i++) {
             System.out.println(recursiveFibonacci(i));
         }
-
+         long endRecursive = System.nanoTime();
+        double recursiveTime = (endRecursive - startRecursive) / 1_000_000.0;
+ System.out.println("Execution Time (Recursive): " + recursiveTime + " ms");
         // Non-Recursive Fibonacci
         System.out.println("\nNon-Recursive Fibonacci:");
+         long startNonRecursive = System.nanoTime();
         nonRecursiveFibonacci(n);
+        long endNonRecursive = System.nanoTime();
+        double nonRecursiveTime = (endNonRecursive - startNonRecursive) / 1_000_000.0;
+        System.out.println("Execution Time (Non-Recursive): " + nonRecursiveTime + " ms");
+        
     }
 }
+
